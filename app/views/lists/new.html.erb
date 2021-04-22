@@ -4,6 +4,7 @@
       <h2 style="margin-top: 20px;">Add a new category</h2>
       <%= simple_form_for(@list) do |f|%>
         <%= f.input :name  %>
+        <%= f.input :url %>
         <%= f.submit "Add category", class: "btn btn-primary" %>
       <% end %>
     </div>
