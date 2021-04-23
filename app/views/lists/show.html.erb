@@ -1,4 +1,4 @@
-<div class="banner-movies d-flex justify-content-center align-items-center" style="background-image: url(<%= @list.url %>); color: white;">
+<div class="banner-movies d-flex justify-content-center align-items-center" style="background-image: url(<%= cl_image_path(@list.photo.key) %>); color: white;">
   <h1><strong>See all <%= @list.name %> movies</strong></h1>
   <h5 class="movie-count"><%= @list.movies.count%> movies</h5>
 </div>
@@ -28,5 +28,3 @@
       <% end %>
     </div>
 </div>
-
-<%= cl_image_tag @list.photo.key %>
