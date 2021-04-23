@@ -7,8 +7,9 @@
       <h1 style="margin: 10px 20px;">See all categories:</h1>
       <div class="cards-box d-flex">
         <%@lists.each do |list| %>
-        <div class="card rounded shadow" style="background-image: url(<%= list.url %>)">
+        <div class="card rounded shadow">
           <h5 style="font-weight: bold;"><%= link_to list.name, list_path(list), class: "list-title" %></h5>
+          <p> <%= link_to "Delete", list_path(list), method: :delete %></p>
         </div>
         <% end %>
       </div>
